@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#06142f">
+  <meta name="description" content="ТОО itEDM — комплексное IT-обслуживание бизнеса в Алматы: аутсорсинг, сети, серверы, кибербезопасность и видеонаблюдение.">
+  <title>ТОО itEDM — IT-решения для бизнеса в Алматы</title>
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("itedm-theme") || "light";
+      if (localStorage.getItem("itedm-font") === "large") document.documentElement.dataset.font = "large";
+    } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header" id="top">
+    <a class="header__logo" href="#top" aria-label="itEDM — на главную">
+      <img src="assets/logo-modern.png" alt="itEDM">
+      <span>IT-решения для бизнеса</span>
+    </a>
+
+    <nav class="nav" id="main-nav" aria-label="Главная навигация">
+      <label class="language-picker language-picker--mobile">
+        <span>Язык сайта</span>
+        <select class="language-select" aria-label="Выберите язык сайта">
+          <option value="ru">Русский</option>
+          <option value="kk">Қазақша</option>
+          <option value="en">English</option>
+        </select>
+      </label>
+      <a href="#services">Услуги</a>
+      <a href="#calculator">Калькулятор</a>
+      <a href="#about">О компании</a>
+      <a href="#process">Как работаем</a>
+      <a href="#contacts">Контакты</a>
+      <a class="nav__phone" href="tel:+77779712555">Позвонить</a>
+    </nav>
+
+    <div class="header-tools" role="group" aria-label="Настройки отображения">
+      <label class="language-picker language-picker--desktop">
+        <span class="sr-only">Язык сайта</span>
+        <select class="language-select" aria-label="Выберите язык сайта">
+          <option value="ru">RU</option>
+          <option value="kk">KZ</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+      <button class="display-tool theme-toggle" type="button" aria-label="Включить тёмную тему" aria-pressed="false" title="Включить тёмную тему"><span aria-hidden="true">◐</span></button>
+      <button class="display-tool font-toggle" type="button" aria-label="Увеличить текст" aria-pressed="false" title="Увеличить текст"><span aria-hidden="true">A+</span></button>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Основные направления itEDM">
+      <canvas id="network-canvas" aria-hidden="true"></canvas>
+      <canvas id="lightning-canvas" aria-hidden="true"></canvas>
+      <div class="storm-clouds" aria-hidden="true"></div>
+      <div class="storm-flash" aria-hidden="true"></div>
+      <div class="dna-status" aria-hidden="true">
+        <span class="dna-status__pulse"></span>
+        <div><small>SMART NETWORK</small><strong>DNA-сеть активна</strong></div>
+      </div>
+
+      <article class="slide is-active" style="--slide-image:url('assets/hero-it-infrastructure.png')">
+        <div class="slide__content">
+          <p class="eyebrow"><span></span>IT-аутсорсинг в Алматы</p>
+          <h1>IT-инфраструктура,<br>которая работает<br>на ваш бизнес</h1>
+          <p class="slide__lead">Берём под контроль компьютеры, серверы, сети и безопасность — от разового выезда до полного сопровождения.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#request">Оставить заявку <b>↗</b></a>
+            <a class="btn btn--ghost" href="#services">Наши услуги</a>
+          </div>
+          <p class="slide__note">✓ Стабильно. Безопасно. Профессионально.</p>
+        </div>
+      </article>
+
+      <article class="slide" style="--slide-image:url('assets/cyber-security.png')">
+        <div class="slide__content">
+          <p class="eyebrow"><span></span>Кибербезопасность</p>
+          <h2>Защитим сеть,<br>серверы и данные<br>компании</h2>
+          <p class="slide__lead">Аудит, устранение уязвимостей, Firewall, резервное копирование и безопасная сегментация сети.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#request">Получить консультацию <b>↗</b></a>
+            <a class="btn btn--ghost" href="#services">Подробнее</a>
+          </div>
+          <p class="slide__note">✓ Защита вашего бизнеса 24/7</p>
+        </div>
+      </article>
+
+      <article class="slide" style="--slide-image:url('assets/network-installation.png')">
+        <div class="slide__content">
+          <p class="eyebrow"><span></span>СКС • ЛВС • Видеонаблюдение</p>
+          <h2>Инфраструктура<br>под ключ — от<br>проекта до запуска</h2>
+          <p class="slide__lead">Сети, Wi‑Fi, VLAN, серверные, IP-камеры и системы контроля доступа с гарантией на работы.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#request">Рассчитать проект <b>↗</b></a>
+            <a class="btn btn--ghost" href="#process">Как мы работаем</a>
+          </div>
+          <p class="slide__note">✓ Один подрядчик на весь проект</p>
+        </div>
+      </article>
+
+      <div class="slider-controls">
+        <button class="slider-arrow slider-prev" type="button" aria-label="Предыдущий слайд">←</button>
+        <div class="slider-dots" role="group" aria-label="Выбор слайда">
+          <button class="is-active" type="button" aria-label="Слайд 1"></button>
+          <button type="button" aria-label="Слайд 2"></button>
+          <button type="button" aria-label="Слайд 3"></button>
+        </div>
+        <button class="slider-arrow slider-next" type="button" aria-label="Следующий слайд">→</button>
+      </div>
+      <div class="slider-progress" aria-hidden="true"><span></span></div>
+
+      <aside class="hero-badge" aria-label="Преимущество полного цикла">
+        <div class="hero-badge__signal"><i></i><small>СИСТЕМЫ ПОД КОНТРОЛЕМ</small></div>
+        <strong>Полный цикл</strong>
+        <span>от аудита до постоянной поддержки</span>
+      </aside>
+    </section>
+
+    <section class="advantages" aria-label="Преимущества">
+      <p><b>01</b> Оперативный выезд по Алматы</p>
+      <p><b>02</b> Гарантия на выполненные работы</p>
+      <p><b>03</b> Наличный и безналичный расчёт</p>
+      <p><b>04</b> Для бизнеса и частных клиентов</p>
+    </section>
+
+    <section class="proof" aria-label="itEDM в цифрах">
+      <div class="proof__intro reveal">
+        <p class="eyebrow eyebrow--dark"><span></span>Почему выбирают itEDM</p>
+        <h2>Технологии без хаоса.<br>Результат без лишних слов.</h2>
+        <p>Разбираемся в задаче бизнеса, собираем решение в единую систему и остаёмся рядом после запуска.</p>
+      </div>
+      <div class="proof__metrics">
+        <article class="metric-card reveal"><strong>10+</strong><span>лет практического<br>IT-опыта</span></article>
+        <article class="metric-card reveal"><strong>8</strong><span>ключевых<br>направлений</span></article>
+        <article class="metric-card reveal"><strong>360°</strong><span>один подрядчик<br>на весь проект</span></article>
+        <article class="metric-card reveal"><strong>Almaty</strong><span>оперативная<br>выездная поддержка</span></article>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-title reveal">
+        <div>
+          <p class="eyebrow eyebrow--dark"><span></span>Экспертиза itEDM</p>
+          <h2>Все IT-задачи —<br>в одних руках</h2>
+        </div>
+        <p>Создаём надёжную цифровую основу для офисов, магазинов, медицинских центров и производственных компаний.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--1" role="img" aria-label="Специалист обслуживает рабочий компьютер">
+            <span class="service-card__number">01</span><span class="service-card__icon" aria-hidden="true">⌨</span>
+          </div>
+          <div class="service-card__body">
+            <h3>IT-аутсорсинг</h3>
+            <p>Абонентское и разовое обслуживание, ремонт техники, установка Windows и Linux, удалённая и выездная поддержка.</p>
+            <div class="tags"><span>Help Desk</span><span>Выезд</span><span>IT-аудит</span></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--2" role="img" aria-label="Команда технической поддержки помогает клиентам">
+            <span class="service-card__number">02</span><span class="service-card__icon" aria-hidden="true">◎</span>
+          </div>
+          <div class="service-card__body">
+            <h3>IT-аутстаффинг</h3>
+            <p>Системные администраторы, сетевые инженеры и специалисты поддержки для временной или постоянной работы.</p>
+            <div class="tags"><span>Инженеры</span><span>Админы</span><span>Поддержка</span></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--3" role="img" aria-label="Инженер выполняет монтаж сетевых кабелей">
+            <span class="service-card__number">03</span><span class="service-card__icon" aria-hidden="true">⌁</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Сети и СКС</h3>
+            <p>Проектирование ЛВС, монтаж кабеля, маркировка и тестирование, MikroTik, Cisco, TP-Link, VLAN, Wi‑Fi и VPN.</p>
+            <div class="tags"><span>СКС / ЛВС</span><span>VLAN</span><span>Wi‑Fi</span></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--4" role="img" aria-label="Администратор работает в серверной">
+            <span class="service-card__number">04</span><span class="service-card__icon" aria-hidden="true">▦</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Серверы и хранение</h3>
+            <p>Windows Server и Linux, Active Directory, файловые серверы, виртуализация, NAS и резервное копирование.</p>
+            <div class="tags"><span>AD</span><span>Backup</span><span>NAS</span></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--5" role="img" aria-label="Центр мониторинга кибербезопасности">
+            <span class="service-card__number">05</span><span class="service-card__icon" aria-hidden="true">◇</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Кибербезопасность</h3>
+            <p>Аудит ИБ, поиск уязвимостей, защита от атак и фишинга, Firewall, политики доступа и обучение сотрудников.</p>
+            <div class="tags"><span>Firewall</span><span>Аудит ИБ</span><span>Защита</span></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--6" role="img" aria-label="Специалист настраивает CRM и аналитику">
+            <span class="service-card__number">06</span><span class="service-card__icon" aria-hidden="true">⚙</span>
+          </div>
+          <div class="service-card__body">
+            <h3>1С, CRM и автоматизация</h3>
+            <p>Установка и сопровождение 1С, внедрение CRM, интеграции с сайтом, телефонией и мессенджерами.</p>
+            <div class="tags"><span>1С</span><span>CRM</span><span>Интеграции</span></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--7" role="img" aria-label="Разработка адаптивного сайта на разных устройствах">
+            <span class="service-card__number">07</span><span class="service-card__icon service-card__icon--code" aria-hidden="true">&lt;/&gt;</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Разработка сайтов</h3>
+            <p>Корпоративные сайты, каталоги и лендинги с мобильной адаптацией, технической поддержкой и обновлением.</p>
+            <div class="tags"><span>Web</span><span>Mobile</span><span>Support</span></div>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__media service-card__media--8" role="img" aria-label="Монтаж камеры видеонаблюдения">
+            <span class="service-card__number">08</span><span class="service-card__icon" aria-hidden="true">◉</span>
+          </div>
+          <div class="service-card__body">
+            <h3>Слаботочные системы</h3>
+            <p>Монтаж и обслуживание IP- и аналогового видеонаблюдения, СКУД, домофонии и пожарной сигнализации.</p>
+            <div class="tags"><span>CCTV</span><span>СКУД</span><span>АПС</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calculator" id="calculator">
+      <div class="section-title reveal">
+        <div>
+          <p class="eyebrow eyebrow--dark"><span></span>Ориентировочный расчёт</p>
+          <h2>Узнайте стоимость<br>за 30 секунд</h2>
+        </div>
+        <p>Выберите услугу и объём работ. Калькулятор сразу покажет предварительную сумму по средним ценам рынка Алматы.</p>
+      </div>
+
+      <div class="calculator-shell reveal">
+        <div class="calculator-controls">
+          <label class="calculator-field">Услуга
+            <select id="calc-service">
+              <option value="it" data-price="8000" data-unit="компьютер / месяц">IT-аутсорсинг — 1 компьютер / месяц</option>
+              <option value="server" data-price="25000" data-unit="сервер / месяц">Обслуживание сервера / месяц</option>
+              <option value="scs" data-price="12500" data-unit="точка">Монтаж СКС — 1 точка</option>
+              <option value="cable" data-price="350" data-unit="метр">Прокладка UTP-кабеля — 1 метр</option>
+              <option value="camera-in" data-price="15000" data-unit="камера">Монтаж IP-камеры внутри помещения</option>
+              <option value="camera-out" data-price="20000" data-unit="камера">Монтаж уличной IP-камеры</option>
+              <option value="windows" data-price="12000" data-unit="устройство">Установка Windows и программ</option>
+              <option value="crm" data-price="100000" data-unit="проект">Базовое внедрение CRM</option>
+              <option value="landing" data-price="200000" data-unit="проект">Разработка лендинга</option>
+              <option value="corporate" data-price="350000" data-unit="проект">Разработка корпоративного сайта</option>
+            </select>
+          </label>
+
+          <fieldset class="quantity-field">
+            <legend>Количество</legend>
+            <div class="quantity-control">
+              <button id="calc-minus" type="button" aria-label="Уменьшить количество">−</button>
+              <input id="calc-quantity" type="number" min="1" max="500" value="1" inputmode="numeric" aria-label="Количество услуг">
+              <button id="calc-plus" type="button" aria-label="Увеличить количество">+</button>
+            </div>
+          </fieldset>
+
+          <div class="calculator-options">
+            <label><input id="calc-urgent" type="checkbox"> <span><b>Срочная работа</b><small>в течение 24 часов · +20%</small></span></label>
+            <label><input id="calc-outside" type="checkbox"> <span><b>Ночь или выходной</b><small>работы вне графика · +30%</small></span></label>
+          </div>
+        </div>
+
+        <aside class="calculator-result" aria-label="Результат расчёта стоимости" aria-live="polite">
+          <p>Предварительная стоимость</p>
+          <strong id="calc-total">8 000 ₸</strong>
+          <div class="calculator-breakdown">
+            <span>Цена за единицу <b id="calc-unit-price">8 000 ₸</b></span>
+            <span>Количество <b id="calc-count">1</b></span>
+            <span>Дополнительные условия <b id="calc-extra">0%</b></span>
+          </div>
+          <a class="btn btn--primary" id="calc-order" href="https://wa.me/77779712555" target="_blank" rel="noopener">Уточнить расчёт в WhatsApp <b>↗</b></a>
+          <small>Расчёт ориентировочный и не является публичной офертой. Оборудование и материалы не включены. Точная цена — после уточнения задачи или выезда.</small>
+        </aside>
+      </div>
+      <!--
+      <details class="calculator-sources reveal">
+        <summary>Как сформированы ориентировочные цены?</summary>
+        <p>Мы сверили открытые прайсы компаний Алматы на IT-аутсорсинг, СКС, видеонаблюдение, установку Windows, CRM и разработку сайтов. Значения округлены до среднего рыночного ориентира. Проверено 28.07.2026.</p>
+        <div>
+          <a href="https://www.kaznetcom.kz/it-аутсорсинг" target="_blank" rel="noopener">IT-аутсорсинг</a>
+          <a href="https://ilt.kz/sks-almaty/" target="_blank" rel="noopener">СКС</a>
+          <a href="https://instal.kz/cena" target="_blank" rel="noopener">Камеры</a>
+          <a href="https://alfacom.kz/pereustanovka-windows-pc" target="_blank" rel="noopener">Windows</a>
+          <a href="https://activesales.kz/uslugi-po-vnedreniyu-crm-v-kazahstane/" target="_blank" rel="noopener">CRM</a>
+          <a href="https://xn--b1adeadlc3bdjl.kz/sozdanie-sajtov/" target="_blank" rel="noopener">Сайты</a>
+        </div>
+      </details>
+      -->
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__photo reveal">
+        <img src="assets/network-installation.png" alt="Инженер itEDM настраивает сетевое оборудование">
+        <div class="about__badge"><b>360°</b><span>комплексный<br>подход</span></div>
+      </div>
+      <div class="about__content reveal">
+        <p class="eyebrow eyebrow--dark"><span></span>О компании</p>
+        <h2>Не просто чиним технику — создаём основу для роста</h2>
+        <p class="about__lead">ТОО itEDM — команда специалистов полного цикла IT-поддержки. Мы анализируем инфраструктуру, предупреждаем сбои и отвечаем за стабильную работу систем.</p>
+        <div class="principles">
+          <article><b>01</b><div><h3>Комплексный подход</h3><p>От кабельной линии до CRM и защиты данных.</p></div></article>
+          <article><b>02</b><div><h3>Практический опыт</h3><p>Офисы, медицина, торговля и производство.</p></div></article>
+          <article><b>03</b><div><h3>Гибкий формат</h3><p>Разовые работы или абонентское обслуживание.</p></div></article>
+          <article><b>04</b><div><h3>Ответственность</h3><p>Гарантия, прозрачные сроки и понятный результат.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="section-title section-title--light reveal">
+        <div>
+          <p class="eyebrow"><span></span>Как мы работаем</p>
+          <h2>От заявки до<br>готового результата</h2>
+        </div>
+        <p>Без сложной бюрократии: быстро погружаемся в задачу и предлагаем понятное техническое решение.</p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card reveal"><b>01</b><span></span><h3>Заявка</h3><p>Вы описываете задачу в WhatsApp или по телефону.</p></article>
+        <article class="process-card reveal"><b>02</b><span></span><h3>Диагностика</h3><p>Уточняем детали, при необходимости выезжаем на объект.</p></article>
+        <article class="process-card reveal"><b>03</b><span></span><h3>Решение</h3><p>Согласовываем стоимость и выполняем работы.</p></article>
+        <article class="process-card reveal"><b>04</b><span></span><h3>Поддержка</h3><p>Проверяем результат, даём гарантию и остаёмся на связи.</p></article>
+      </div>
+    </section>
+
+    <section class="section request" id="request">
+      <div class="request__content reveal">
+        <p class="eyebrow eyebrow--dark"><span></span>Бесплатная консультация</p>
+        <h2>Расскажите о вашей IT-задаче</h2>
+        <p>Заполните форму — заявка сразу откроется в WhatsApp. Специалист уточнит детали и предложит решение.</p>
+        <div class="request__phone">
+          <small>Или позвоните прямо сейчас</small>
+          <a href="tel:+77779712555">+7&nbsp;(777)&nbsp;971&#8209;25&#8209;55</a>
+        </div>
+      </div>
+
+      <form class="request-form reveal" id="request-form">
+        <label>Ваше имя<input name="name" type="text" required placeholder="Как к вам обращаться?"></label>
+        <label>Номер телефона<input name="phone" type="tel" required placeholder="+7 (___) ___-__-__"></label>
+        <label>Какая услуга нужна?
+          <select name="service" required>
+            <option value="" disabled selected>Выберите направление</option>
+            <option>IT-аутсорсинг</option>
+            <option>IT-аутстаффинг</option>
+            <option>Сети и СКС</option>
+            <option>Серверы и хранение</option>
+            <option>Кибербезопасность</option>
+            <option>1С, CRM и автоматизация</option>
+            <option>Разработка сайтов</option>
+            <option>Слаботочные системы</option>
+            <option>Другая задача</option>
+          </select>
+        </label>
+        <label>Кратко опишите задачу<textarea name="message" rows="4" placeholder="Что нужно настроить, установить или исправить?"></textarea></label>
+        <button class="btn btn--primary" type="submit">Отправить в WhatsApp <b>↗</b></button>
+        <small>Нажимая кнопку, вы соглашаетесь на обработку данных для связи по заявке.</small>
+      </form>
+    </section>
+
+    <section class="section contacts" id="contacts">
+      <div class="section-title reveal">
+        <div>
+          <p class="eyebrow eyebrow--dark"><span></span>Контакты</p>
+          <h2>Всегда на связи</h2>
+        </div>
+        <p>Работаем по Алматы. Подберём формат поддержки под ваш бизнес и бюджет.</p>
+      </div>
+
+      <div class="contacts-grid">
+        <article class="contact-card reveal">
+          <div class="contact-card__avatar">Е</div>
+          <div><h3>Евгений</h3><p>IT-решения и проекты</p><a href="tel:+77779712555">+7&nbsp;(777)&nbsp;971&#8209;25&#8209;55</a></div>
+          <a class="contact-card__wa" href="https://wa.me/77779712555?text=Здравствуйте!%20Обращаюсь%20с%20сайта%20itEDM." target="_blank" rel="noopener" aria-label="Написать Евгению в WhatsApp">↗</a>
+        </article>
+        <article class="contact-card reveal">
+          <div class="contact-card__avatar">Д</div>
+          <div><h3>Дмитрий</h3><p>Техническое сопровождение</p><a href="tel:+77086371365">+7&nbsp;(708)&nbsp;637&#8209;13&#8209;65</a></div>
+          <a class="contact-card__wa" href="https://wa.me/77086371365?text=Здравствуйте!%20Обращаюсь%20с%20сайта%20itEDM." target="_blank" rel="noopener" aria-label="Написать Дмитрию в WhatsApp">↗</a>
+        </article>
+        <article class="contact-card reveal">
+          <div class="contact-card__avatar">М</div>
+          <div><h3>Максим</h3><p>Монтаж и инфраструктура</p><a href="tel:+77074700783">+7&nbsp;(707)&nbsp;470&#8209;07&#8209;83</a></div>
+          <a class="contact-card__wa" href="https://wa.me/77074700783?text=Здравствуйте!%20Обращаюсь%20с%20сайта%20itEDM." target="_blank" rel="noopener" aria-label="Написать Максиму в WhatsApp">↗</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__logo reveal">
+      <img src="assets/logo-modern.png" alt="itEDM">
+      <div><strong>ТОО itEDM</strong><span>Инфраструктура. Безопасность. Развитие.</span></div>
+    </div>
+    <div class="footer__columns">
+      <div><strong>Навигация</strong><a href="#services">Услуги</a><a href="#calculator">Калькулятор</a><a href="#about">О компании</a><a href="#process">Как работаем</a></div>
+      <div><strong>Направления</strong><a href="#services">IT-аутсорсинг</a><a href="#services">Кибербезопасность</a><a href="#services">Сети и серверы</a></div>
+      <div><strong>Контакты</strong><a href="tel:+77779712555">+7&nbsp;(777)&nbsp;971&#8209;25&#8209;55</a><span>г. Алматы, Казахстан</span></div>
+    </div>
+    <p class="footer__copyright">© 2026 ТОО itEDM. Надёжная IT-инфраструктура для вашего бизнеса.</p>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/77779712555?text=Здравствуйте!%20Мне%20нужна%20консультация%20itEDM." target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><span>WhatsApp</span><b>✆</b></a>
+
+  <nav class="mobile-actions" aria-label="Быстрая связь">
+    <a class="mobile-actions__call" href="tel:+77779712555"><span>☎</span>Позвонить</a>
+    <a class="mobile-actions__wa" href="https://wa.me/77779712555?text=Здравствуйте!%20Мне%20нужна%20консультация%20itEDM." target="_blank" rel="noopener"><span>✆</span>WhatsApp</a>
+  </nav>
+</body>
+</html>
